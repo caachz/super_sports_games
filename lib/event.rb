@@ -1,3 +1,5 @@
+require './lib/standard_deviation.rb'
+
 class Event
   attr_reader :event_name, :age_of_participants
 
@@ -15,9 +17,14 @@ class Event
   end
 
   def average_age
+    sum_of_ages = 0.00
     @age_of_participants.each do |age|
       sum_of_ages += age
     end
     sum_of_ages = sum_of_ages/ @age_of_participants.count
+  end
+
+  def standard_deviation_age
+
   end
 end

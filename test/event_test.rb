@@ -1,6 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/event.rb'
+require './lib/standard_deviation.rb'
+
 
 class EventTest < Minitest::Test
   def test_it_exists
@@ -31,5 +33,17 @@ class EventTest < Minitest::Test
     ski = Event.new("Skiing", [24, 30, 18, 20, 41])
 
     assert_equal 18, ski.min_age
+  end
+
+  def test_it_can_pull_average_participant_age
+    ski = Event.new("Skiing", [24, 30, 18, 20, 41])
+
+    assert_equal 26.60, ski.average_age
+  end
+
+  def test_it_can_calculate_standard_deviation_of_ages
+    ski = Event.new("Skiing", [24, 30, 18, 20, 41])
+
+    assert_equal 8.28, ski.standard_deviation_age
   end
 end
