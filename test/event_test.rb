@@ -43,7 +43,7 @@ class EventTest < Minitest::Test
 
   def test_it_can_calculate_standard_deviation_of_ages
     ski = Event.new("Skiing", [24, 30, 18, 20, 41])
-
+    require 'pry'; binding.pry
     assert_equal 8.28, ski.standard_deviation_age
   end
 end
