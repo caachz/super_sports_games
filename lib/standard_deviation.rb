@@ -11,7 +11,7 @@ sum_of_diff_squared = 0
       sum_of_ages += age
     end
 
-mean = sum_of_ages/total_ages
+mean = sum_of_ages.to_f/total_ages.to_f
 
     ages.each do |age|
       diff_between_actual_and_mean << age - mean
@@ -26,6 +26,7 @@ mean = sum_of_ages/total_ages
     end
 
 sum_of_diff_squared_devided_by_count = sum_of_diff_squared/total_ages
+square_root_of_sum_of_diff_squared_devided_by_count = Math.sqrt(sum_of_diff_squared_devided_by_count)
 
 p sum_of_ages
 p total_ages
@@ -34,5 +35,6 @@ p diff_between_actual_and_mean
 p diff_squared
 p sum_of_diff_squared
 p sum_of_diff_squared_devided_by_count
+p square_root_of_sum_of_diff_squared_devided_by_count
 
 # When you find the standard deviation, print it out
