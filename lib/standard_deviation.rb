@@ -1,3 +1,20 @@
+class Standard_deviation
+  attr_reader :ages
+
+  def initialize(ages)
+    @ages = ages
+  end
+
+  def add_ages_together
+    sum_of_ages = 0
+    ages.each do |age|
+      sum_of_ages += age
+    end
+    sum_of_ages
+  end
+
+  
+
 
 ages = [24, 30, 18, 20, 41]
 sum_of_ages = 0
@@ -36,5 +53,7 @@ p diff_squared
 p sum_of_diff_squared
 p sum_of_diff_squared_devided_by_count
 p square_root_of_sum_of_diff_squared_devided_by_count
+
+end
 
 # When you find the standard deviation, print it out
